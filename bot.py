@@ -11,7 +11,7 @@ import shelve
 #---------------------------------------------AI Configuration-------------------------------------------------
 genai.configure(api_key=GOOGLE_AI_KEY)
 
-model = genai.GenerativeModel(model_name="gemini-1.5-flash", generation_config=text_generation_config, safety_settings=safety_settings)
+model = genai.GenerativeModel(model_name="gemini-1.5-pro-exp-0827", generation_config=text_generation_config, safety_settings=safety_settings, system_instruction="Your name is Jarviss")
 
 message_history:Dict[int, genai.ChatSession] = {}
 tracked_threads = []
